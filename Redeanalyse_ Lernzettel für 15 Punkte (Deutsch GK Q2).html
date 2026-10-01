@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Redeanalyse: Lernzettel für 15 Notenpunkte (Deutsch GK Q2, NRW)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Literata:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --paper:#f7f8fb; --card:#ffffff; --ink:#1b2340; --muted:#5a6280; --line:#d5d9e6;
+  --accent:#2a4bd7; --accent-soft:#e4e9fb; --mark:#ffe66b; --good:#1f7a4d; --good-soft:#e1f3ea;
+  --bad:#b3261e; --bad-soft:#fbe6e4; --warn-soft:#fff4d6;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#10131f; --card:#181c2c; --ink:#e8ebf7; --muted:#9aa2c0; --line:#2c3350;
+    --accent:#8ea3ff; --accent-soft:#222a4d; --mark:#6b5d12; --good:#6fd3a0; --good-soft:#15291f;
+    --bad:#ff8a80; --bad-soft:#35191a; --warn-soft:#2e2812;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#10131f; --card:#181c2c; --ink:#e8ebf7; --muted:#9aa2c0; --line:#2c3350;
+  --accent:#8ea3ff; --accent-soft:#222a4d; --mark:#6b5d12; --good:#6fd3a0; --good-soft:#15291f;
+  --bad:#ff8a80; --bad-soft:#35191a; --warn-soft:#2e2812;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Literata",Georgia,"Times New Roman",serif;font-size:17px;line-height:1.65}
+h1,h2,h3,h4,nav,th,.tag,.lbl{font-family:"Archivo","Helvetica Neue",Arial,sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 18px 80px}
+header.top{padding:36px 0 18px}
+h1{font-size:clamp(30px,6vw,46px);line-height:1.1;margin:0 0 10px;font-weight:800;letter-spacing:-.01em}
+h1 mark{background:var(--mark);color:inherit;padding:0 .15em}
+.sub{color:var(--muted);margin:0;max-width:60ch}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line);margin:0 -18px;padding:10px 18px;display:flex;gap:8px;overflow-x:auto;white-space:nowrap}
+nav a{font-size:14px;font-weight:700;text-decoration:none;color:var(--ink);padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
+nav a:hover,nav a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+section{margin-top:56px}
+h2{font-size:clamp(24px,4vw,32px);margin:0 0 6px;font-weight:800;line-height:1.2}
+h2 small{display:block;font-size:15px;font-weight:500;color:var(--muted);margin-top:4px}
+h3{font-size:20px;margin:34px 0 8px;font-weight:700}
+h4{font-size:16px;margin:20px 0 4px;font-weight:700}
+p{margin:.6em 0}
+ul,ol{padding-left:1.3em;margin:.5em 0}
+li{margin:.25em 0}
+.box{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:6px;padding:14px 18px;margin:16px 0}
+.box.good{border-left-color:var(--good);background:var(--good-soft)}
+.box.bad{border-left-color:var(--bad);background:var(--bad-soft)}
+.box.warn{border-left-color:#c9961a;background:var(--warn-soft)}
+.box .lbl{display:block;font-weight:800;font-size:14px;margin-bottom:4px}
+.box p:first-of-type{margin-top:0}.box p:last-child{margin-bottom:0}
+.scroll{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15.5px;line-height:1.5}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--accent-soft);font-size:14px}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600}
+.muster{font-style:italic;border-left:3px solid var(--line);padding-left:14px;margin:12px 0;color:var(--ink)}
+.formula{display:flex;flex-wrap:wrap;gap:6px;align-items:stretch;margin:14px 0}
+.formula span{background:var(--accent-soft);border:1px solid var(--accent);border-radius:6px;padding:8px 12px;font-family:"Archivo",sans-serif;font-weight:700;font-size:15px;flex:1 1 140px;text-align:center}
+.formula i{align-self:center;color:var(--muted);font-style:normal;font-weight:800}
+mark{background:var(--mark);color:inherit;padding:0 2px;border-radius:2px}
+.rede{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin:16px 0;font-size:16.5px}
+.rede p{display:grid;grid-template-columns:3.2em 1fr;gap:6px;margin:.15em 0}
+.rede .z{color:var(--muted);font-family:"Archivo",sans-serif;font-size:13px;padding-top:3px}
+.tag{display:inline-block;font-size:12.5px;font-weight:700;padding:1px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent);margin-left:4px;white-space:nowrap}
+details{background:var(--card);border:1px solid var(--line);border-radius:6px;margin:12px 0;padding:0}
+summary{cursor:pointer;font-family:"Archivo",sans-serif;font-weight:700;padding:12px 16px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";display:inline-block;width:1.2em;color:var(--accent);font-weight:800}
+details[open] summary::before{content:"–"}
+summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+details .in{padding:0 18px 14px;border-top:1px solid var(--line)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.cols{grid-template-columns:1fr}.rede p{grid-template-columns:2.8em 1fr}}
+.check li{list-style:none;margin-left:-1.3em}
+.check input{margin-right:8px;transform:scale(1.2);accent-color:var(--accent)}
+.theme{position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:6;font-family:"Archivo",sans-serif;font-weight:700;font-size:13px;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+code{font-family:inherit;background:var(--accent-soft);padding:0 4px;border-radius:3px}
+@media print{
+  nav,.theme{display:none}
+  body{background:#fff;color:#000;font-size:11pt}
+  section{margin-top:22px;break-inside:auto}
+  .box,.scroll,.rede,details{break-inside:avoid}
+  details{display:block}
+  details>summary{display:none}
+  details>.in{display:block}
+}
+</style>
+</head>
+<body>
+<main>
+<header class="top">
+  <h1>Redeanalyse auf <mark>15 Punkte</mark></h1>
+  <p class="sub">Deutsch Grundkurs, Q2, NRW. Aufbau, Formulierungen, Rhetorik-Katalog und eine komplett durchgearbeitete Beispielanalyse. Alle Checkboxen am Ende sind anklickbar.</p>
+</header>
+
+<nav aria-label="Inhalt">
+  <a href="#ueberblick">Überblick</a>
+  <a href="#einleitung">Einleitung</a>
+  <a href="#zusammenfassung">Zusammenfassung</a>
+  <a href="#sprache">Sprachanalyse</a>
+  <a href="#argumentation">Argumentation</a>
+  <a href="#schluss">Schluss</a>
+  <a href="#beispiel">Beispiel</a>
+  <a href="#fehler">Fehler</a>
+  <a href="#klausur">Klausurtag</a>
+</nav>
+
+<!-- ======================= ÜBERBLICK ======================= -->
+<section id="ueberblick">
+  <h2>Überblick: Was gibt 15 Punkte?</h2>
+
+  <div class="formula" aria-label="Aufbau">
+    <span>1 Einleitung</span><i>→</i>
+    <span>2 Zusammenfassung + Hypothese</span><i>→</i>
+    <span>3a Sprachanalyse</span><i>→</i>
+    <span>3b Argumentation</span><i>→</i>
+    <span>4 Schluss</span>
+  </div>
+
+  <div class="box">
+    <span class="lbl">Der Kern in einem Satz</span>
+    <p>Eine Redeanalyse beantwortet nicht <em>„Was sagt der Redner?“</em>, sondern <strong>„Wie versucht er, sein Publikum zu überzeugen, und wie gut gelingt ihm das?“</strong></p>
+  </div>
+
+  <h3>Was die Korrektur belohnt</h3>
+  <div class="scroll"><table>
+    <tr><th>Bereich</th><th>Was für Top-Punkte nötig ist</th></tr>
+    <tr><td>Inhalt (Aufgabenverständnis)</td><td>Intention, Kernthesen und Aufbau der Rede werden richtig erfasst; die Hypothese passt zum ganzen Text.</td></tr>
+    <tr><td>Analyse</td><td>Viele treffende Belege, jedes Mittel wird <strong>gedeutet</strong> und mit der Absicht verknüpft. Pathos/Ethos/Logos sind sichtbar.</td></tr>
+    <tr><td>Argumentation</td><td>Kernthesen, Argumenttypen und <strong>Schwächen</strong> werden herausgearbeitet.</td></tr>
+    <tr><td>Darstellung</td><td>Klarer Aufbau, Fachsprache, sachlicher Stil, Präsens, korrekte Zitierweise, wenige Fehler. Das macht in NRW ungefähr ein Drittel der Gesamtnote aus.</td></tr>
+  </table></div>
+
+  <div class="box warn">
+    <span class="lbl">Realistisch bleiben</span>
+    <p>15 NP entsprechen ca. 95 % und mehr. Das heißt: fast keine inhaltlichen Lücken, durchgehend tiefe Deutung und sehr saubere Sprache. Das Ziel ist machbar, wenn du das <strong>Grundprinzip</strong> (unten) in jedem Absatz durchhältst.</p>
+  </div>
+
+  <h3>Das Grundprinzip für jeden Analyse-Absatz</h3>
+  <div class="formula">
+    <span>1 Beleg<br><small>(Zeile!)</small></span><i>+</i>
+    <span>2 Mittel benennen</span><i>+</i>
+    <span>3 Wirkung auf die Zuhörer</span><i>+</i>
+    <span>4 Bezug zur Absicht</span>
+  </div>
+  <p class="muster">„In Z. 8 wiederholt die Rednerin dreimal die Wendung ‚Wir haben‘ (Anapher). Dadurch klingt das Zögern wie eine lange Liste von Versäumnissen. Zugleich schließt sie sich selbst ein, was Vorwürfe abmildert und ihre Forderung nach sofortigem Handeln (Z. 10) vorbereitet.“</p>
+  <p>Fehlt Schritt 3 oder 4, bekommst du für das Mittel kaum Punkte. <strong>Nur Benennen ist eine Aufzählung, keine Analyse.</strong></p>
+</section>
+
+<!-- ======================= EINLEITUNG ======================= -->
+<section id="einleitung">
+  <h2>1 Einleitung <small>3–5 Sätze, keine Wertung, kein Vorgriff auf die Analyse</small></h2>
+
+  <h3>Bausteine</h3>
+  <div class="scroll"><table>
+    <tr><th>Baustein</th><th>Was gehört rein?</th></tr>
+    <tr><td>Titel</td><td>Titel der Rede oder des Textes (falls keiner: „Rede zu …“)</td></tr>
+    <tr><td>Autor/in</td><td>Name + <strong>Rolle</strong> (Amt, Partei, politische Position)</td></tr>
+    <tr><td>Textsorte</td><td>politische Rede (ggf. genauer: Regierungserklärung, Gedenkrede, Wahlkampfrede, Bundestagsrede)</td></tr>
+    <tr><td>Thema</td><td>Worum geht es? Ein Satz, kein Detail.</td></tr>
+    <tr><td>Zeit</td><td>Datum/Jahr der Rede (+ Ort, falls angegeben)</td></tr>
+    <tr><td>Erweiterung</td><td>Anlass, Adressaten, politischer/historischer Kontext, Absicht</td></tr>
+  </table></div>
+
+  <h3>Mustersätze</h3>
+  <p class="muster">„In der politischen Rede ‚Titel‘, die Vorname Nachname, Amt der Partei, am Datum anlässlich Anlass in Ort vor Adressaten hielt, thematisiert die Rednerin Thema. Die Rede entstand vor dem Hintergrund Kontext, zum Beispiel einer Krise, eines Jahrestags oder einer Wahl. Ziel der Rednerin ist es, das Publikum von Kernanliegen zu überzeugen.“</p>
+
+  <div class="box good"><span class="lbl">Gut</span><p>Präzise Rolle („Bundeskanzlerin“, „Oppositionsführer“), konkrete Zeit, ein Satz Kontext. <strong>Die Rolle ist wichtig</strong>, denn sie erklärt später das Ethos.</p></div>
+  <div class="box bad"><span class="lbl">Schlecht</span><p>„In dem Text geht es um Politik.“ (keine Angaben) oder eine Einleitung, die schon Stilmittel analysiert.</p></div>
+</section>
+
+<!-- ======================= ZUSAMMENFASSUNG ======================= -->
+<section id="zusammenfassung">
+  <h2>2 Zusammenfassung + Hypothese <small>Inhalt neutral zusammenfassen, dann Interpretationshypothese als Überleitung</small></h2>
+
+  <div class="cols">
+    <div class="box good"><span class="lbl">Immer</span>
+      <ul>
+        <li>Präsens</li>
+        <li>eigene Worte</li>
+        <li>Sinnabschnitte mit <strong>Zeilenangaben</strong></li>
+        <li>neutral und sachlich</li>
+        <li>Verknüpfungswörter</li>
+        <li>Redeverben (fordert, appelliert, begründet, verweist)</li>
+      </ul></div>
+    <div class="box bad"><span class="lbl">Nie</span>
+      <ul>
+        <li>Zitate</li>
+        <li>Wertung („geschickt“, „manipulativ“)</li>
+        <li>Detail-Nacherzählung</li>
+        <li>Stilmittel-Analyse (kommt später)</li>
+        <li>Präteritum</li>
+      </ul></div>
+  </div>
+
+  <h3>Vorgehen</h3>
+  <ol>
+    <li>Beim Lesen die Rede in <strong>Sinnabschnitte</strong> teilen (Begrüßung, Problem, Ursachen, Forderung, Appell …) und Zeilen notieren.</li>
+    <li>Pro Abschnitt <strong>ein</strong> Satz, höchstens zwei.</li>
+    <li>Passende Verben nutzen: <em>stellt dar, begründet, kritisiert, fordert, warnt, verweist auf, appelliert, würdigt, grenzt sich ab</em>.</li>
+  </ol>
+
+  <p class="muster">„Zunächst begrüßt die Rednerin ihr Publikum und kündigt eine Wende an (Z. 1–3). Anschließend beschreibt sie Folgen des Klimawandels, die alle kennen (Z. 4–6). Daraufhin kritisiert sie das bisherige Zögern der Politik (Z. 7–9) und stellt ihren Vorschlag einer klimaneutralen Stadt bis 2035 vor (Z. 10–12). Schließlich ruft sie zu gemeinsamem Handeln auf (Z. 13).“</p>
+
+  <h3>Interpretationshypothese (Überleitung)</h3>
+  <p>Eine These zu <strong>Absicht + Mittel + Wirkung</strong>. Sie ist dein roter Faden und wird im Schluss geprüft.</p>
+  <div class="formula">
+    <span>Absicht<br><small>Wovon will der Redner überzeugen?</small></span><i>+</i>
+    <span>Adressaten<br><small>Wen will er erreichen?</small></span><i>+</i>
+    <span>Hauptstrategie<br><small>Wie macht er das?</small></span>
+  </div>
+  <p class="muster">„Es ist zu vermuten, dass die Rednerin ihre Zuhörer von der Notwendigkeit sofortiger Klimaschutzmaßnahmen überzeugen will, indem sie durch emotionale Bilder und ein gemeinschaftliches ‚Wir‘ Verantwortungsgefühl weckt und ihre Forderung zugleich durch ihre Rolle als Bürgermeisterin legitimiert.“</p>
+  <div class="box warn"><span class="lbl">Tipp</span><p>Formuliere die Hypothese erst, <strong>nachdem</strong> du die ganze Rede einmal gelesen hast. Nutze Verben der Vorsicht: „vermutlich“, „es ist anzunehmen“, „die Rede scheint darauf abzuzielen“.</p></div>
+</section>
+
+<!-- ======================= SPRACHANALYSE ======================= -->
+<section id="sprache">
+  <h2>3a Sprachanalyse <small>Der Punktebringer: Sprache + Pathos/Ethos/Logos + emotionale Ebene</small></h2>
+
+  <h3>Die drei Überzeugungsmittel</h3>
+  <div class="scroll"><table>
+    <tr><th>Mittel</th><th>Prinzip</th><th>Woran erkenne ich es?</th><th>Typische Wirkung</th></tr>
+    <tr><td>Logos</td><td>Vernunft</td><td>Zahlen, Fakten, Begründungen, „weil“, „deshalb“, Beispiele</td><td>wirkt sachlich, nachvollziehbar, glaubhaft</td></tr>
+    <tr><td>Ethos</td><td>Glaubwürdigkeit</td><td>Verweis auf Amt, Erfahrung, Werte, „Als … sage ich Ihnen“, Selbstverpflichtung</td><td>Vertrauen, Autorität, moralische Legitimation</td></tr>
+    <tr><td>Pathos</td><td>Gefühle</td><td>drastische Bilder, Appelle, Wertwörter (Freiheit, Zukunft, Angst, Kinder)</td><td>Betroffenheit, Hoffnung, Empörung, Handlungsbereitschaft</td></tr>
+  </table></div>
+  <p>Immer ergänzen: <strong>an welcher Stelle und zu welchem Zweck?</strong> Gute Reden mischen alle drei. Sage dazu, wo eines <em>überwiegt</em>.</p>
+
+  <h3>Sprachliche Ebenen systematisch durchgehen</h3>
+  <div class="scroll"><table>
+    <tr><th>Ebene</th><th>Leitfrage</th><th>Beispiel für Deutung</th></tr>
+    <tr><td>Wortwahl</td><td>gehoben oder Alltagssprache? Fachbegriffe? Wertwörter?</td><td>Alltagssprache → Nähe und Volksnähe; gehobene Wortwahl → Würde, Autorität; Fachbegriffe → Kompetenz</td></tr>
+    <tr><td>Satzbau</td><td>Parataxe oder Hypotaxe? Kurzsätze? Ellipsen?</td><td>Kurzsätze → Dringlichkeit, Entschlossenheit; Schachtelsätze → Differenziertheit, Sachlichkeit</td></tr>
+    <tr><td>Schlüsselwörter / Leitmotive</td><td>Welche Wörter kehren wieder? Positiv oder negativ besetzt?</td><td>positiv („Zukunft“, „gemeinsam“) → Identifikation; negativ („Bedrohung“, „Chaos“) → Angst, Abgrenzung</td></tr>
+    <tr><td>Bildsprache</td><td>Metaphern, Vergleiche, Personifikationen</td><td>veranschaulichen Abstraktes und erzeugen Emotionen</td></tr>
+    <tr><td>Rhetorische Figuren</td><td>Anapher, Trikolon, Antithese, Klimax …</td><td>siehe Katalog unten</td></tr>
+    <tr><td>Adressatenbezug</td><td>„wir“, „Sie“, „ich“? Direkte Anrede?</td><td>Pluralis auctoris / inklusives „Wir“ → Gemeinschaft, geteilte Verantwortung; „Ihr“/„Sie“ → Abgrenzung oder Appell</td></tr>
+    <tr><td>Emotionale Ebene</td><td>sachlich-distanziert, anklagend oder solidarisch?</td><td>anklagend → Schuld zuweisen; solidarisch → Wir-Gefühl</td></tr>
+    <tr><td>Para-/nonverbal (nur falls bekannt)</td><td>Pausen, Lautstärke, Tempo, Gestik, Blickkontakt</td><td>Pausen → Betonung; Lautstärke ↑ → Dringlichkeit; Blickkontakt → Nähe</td></tr>
+  </table></div>
+
+  <h3>Rhetorik-Katalog mit Beispielen</h3>
+  <p>Die Beispiele sind <em>eigene Formulierungen</em> zum Merken, keine Zitate aus bestimmten Reden.</p>
+  <div class="scroll"><table>
+    <tr><th>Mittel</th><th>Erklärung</th><th>Beispiel</th><th>Wirkung</th></tr>
+    <tr><td>Anapher</td><td>gleicher Satzanfang</td><td>„Wir haben diskutiert. Wir haben vertagt. Wir haben gewartet.“</td><td>Eindringlichkeit, Rhythmus, Vorwurf</td></tr>
+    <tr><td>Epipher</td><td>gleiches Satzende</td><td>„… das ist unser Land. Das ist unsere Verantwortung. Das ist unsere Aufgabe.“</td><td>Nachdruck, Einprägsamkeit</td></tr>
+    <tr><td>Parallelismus</td><td>gleicher Satzbau</td><td>„Wer arbeitet, soll leben können. Wer lernt, soll Chancen haben.“</td><td>Ordnung, Merkbarkeit</td></tr>
+    <tr><td>Antithese</td><td>Gegensatz</td><td>„Nicht Angst, sondern Mut soll uns leiten.“</td><td>Zuspitzung, klare Positionierung</td></tr>
+    <tr><td>Klimax</td><td>Steigerung</td><td>„Es ist ein Problem, eine Krise, eine Katastrophe.“</td><td>Dramatisierung, Höhepunkt</td></tr>
+    <tr><td>Trikolon</td><td>Dreierreihe</td><td>„für unsere Stadt, für unsere Kinder, für unsere Zukunft“</td><td>Vollständigkeit, Feierlichkeit, Merkbarkeit</td></tr>
+    <tr><td>Rhetorische Frage</td><td>Frage ohne erwartete Antwort</td><td>„Wollen wir wirklich weiter zusehen?“</td><td>Zustimmung nahelegen, Gewissen ansprechen</td></tr>
+    <tr><td>Metapher</td><td>Bild ohne „wie“</td><td>„Wir stehen an einem Scheideweg.“</td><td>veranschaulicht, emotionalisiert</td></tr>
+    <tr><td>Vergleich</td><td>Bild mit „wie“</td><td>„Das Haus brennt wie Zunder.“</td><td>Anschaulichkeit</td></tr>
+    <tr><td>Personifikation</td><td>Vermenschlichung</td><td>„Die Zeit läuft uns davon.“</td><td>Dringlichkeit</td></tr>
+    <tr><td>Hyperbel</td><td>Übertreibung</td><td>„Nichts ist teurer als Nichtstun.“</td><td>Betonung, Zuspitzung</td></tr>
+    <tr><td>Euphemismus</td><td>Beschönigung</td><td>„Freisetzung“ statt Entlassung</td><td>Verharmlosung</td></tr>
+    <tr><td>Alliteration</td><td>gleicher Anlaut</td><td>„Mut machen, Menschen mitnehmen“</td><td>Einprägsamkeit</td></tr>
+    <tr><td>Ellipse</td><td>unvollständiger Satz</td><td>„Genug geredet. Jetzt handeln.“</td><td>Dynamik, Entschlossenheit</td></tr>
+    <tr><td>Neologismus</td><td>Wortneuschöpfung</td><td>„Zukunftsmut“</td><td>Aufmerksamkeit, Schlagwort</td></tr>
+    <tr><td>Appell / Imperativ</td><td>Aufforderung</td><td>„Lassen Sie uns gemeinsam beginnen!“</td><td>Handlungsimpuls</td></tr>
+    <tr><td>Inklusives „Wir“<br><small>(Pluralis auctoris)</small></td><td>Redner schließt sich mit ein</td><td>„Wir alle tragen Verantwortung.“</td><td>Gemeinschaft, Solidarität</td></tr>
+    <tr><td>Direkte Anrede</td><td>Publikum wird angesprochen</td><td>„Liebe Mitbürgerinnen und Mitbürger,“</td><td>Nähe, Einbeziehung</td></tr>
+    <tr><td>Autoritätsverweis</td><td>Bezug auf Verfassung, Geschichte, Experten</td><td>„Das Grundgesetz verpflichtet uns …“</td><td>Legitimation (Ethos/Logos)</td></tr>
+  </table></div>
+
+  <h3>Wirkungsbausteine (Formulierungen)</h3>
+  <ul>
+    <li>„Dadurch wirkt die Aussage besonders eindringlich, da …“</li>
+    <li>„Die Rednerin erzeugt auf diese Weise ein Gefühl von …“</li>
+    <li>„Dies unterstreicht ihre Forderung nach …“</li>
+    <li>„Hierdurch soll das Publikum zu … bewegt werden.“</li>
+    <li>„Im Kontext der Rede (Z. …) wird deutlich, dass …“</li>
+    <li>„Auffällig ist, dass der Redner an dieser Stelle von der Sachebene auf die Gefühlsebene wechselt.“</li>
+  </ul>
+
+  <div class="box good"><span class="lbl">Für 15 Punkte</span>
+    <p>Gliedere die Sprachanalyse nicht nach Stilmitteln, sondern <strong>nach Textabschnitten oder nach Wirkungsabsicht</strong> (z. B. „Aufbau von Glaubwürdigkeit“, „Emotionalisierung“, „Handlungsaufforderung“). Das zeigt, dass du die Rede als Strategie verstehst. Eine reine Mittel-Liste liefert höchstens mittlere Punkte.</p></div>
+</section>
+
+<!-- ======================= ARGUMENTATION ======================= -->
+<section id="argumentation">
+  <h2>3b Argumentationsanalyse <small>Was wird behauptet, womit begründet, und wie tragfähig ist es?</small></h2>
+
+  <h3>Drei Schritte</h3>
+  <ol>
+    <li><strong>Kernthese(n) benennen</strong> (1–2): „Die zentrale These lautet, dass …“</li>
+    <li><strong>Argumente zuordnen:</strong> Welcher Typ? Wo steht es (Z.)?</li>
+    <li><strong>Tragfähigkeit prüfen:</strong> Was ist belegt, was bloß behauptet, was einseitig?</li>
+  </ol>
+
+  <h3>Argumenttypen</h3>
+  <div class="scroll"><table>
+    <tr><th>Typ</th><th>Erkennbar an</th><th>Beispiel</th></tr>
+    <tr><td>Faktenargument</td><td>Zahlen, Studien, belegbare Tatsachen</td><td>„Seit zwanzig Jahren ist die Erwärmung belegt.“</td></tr>
+    <tr><td>Normatives Argument</td><td>Werte, Gesetze, Moral, „sollen/müssen“</td><td>„Wir sind es unseren Kindern schuldig.“</td></tr>
+    <tr><td>Autoritätsargument</td><td>Experten, Verfassung, historische Vorbilder</td><td>„Die Wissenschaft ist sich einig.“</td></tr>
+    <tr><td>Beispielargument</td><td>Einzelfall, Erfahrung, Anekdote</td><td>„Eine Familie vor den Trümmern ihres Hauses.“</td></tr>
+    <tr><td>Analogie</td><td>Vergleich mit ähnlichem Fall</td><td>„Wie nach dem Wiederaufbau so müssen wir …“</td></tr>
+    <tr><td>Emotionales Argument</td><td>Appell an Angst, Mitleid, Stolz</td><td>„Wollen Sie, dass Ihre Kinder das erleben?“</td></tr>
+    <tr><td>Folgenargument</td><td>„Wenn …, dann …“</td><td>„Wenn wir zögern, werden die Bilder Alltag.“</td></tr>
+  </table></div>
+
+  <h3>Schwächen erkennen</h3>
+  <div class="scroll"><table>
+    <tr><th>Schwäche</th><th>Woran erkennbar?</th></tr>
+    <tr><td>Scheinlogik</td><td>Schlussfolgerung folgt nicht zwingend aus der Prämisse</td></tr>
+    <tr><td>Falsches Dilemma / Schwarz-Weiß</td><td>„Entweder … oder …“ ohne Zwischenlösungen</td></tr>
+    <tr><td>Pauschalisierung</td><td>„alle“, „nie“, „jeder weiß“, ein Beispiel soll für alles stehen</td></tr>
+    <tr><td>Einseitigkeit</td><td>Gegenargumente und Kosten werden nicht genannt</td></tr>
+    <tr><td>Unbelegte Behauptung</td><td>Zahl oder Fakt ohne Quelle</td></tr>
+    <tr><td>Emotionalisierung statt Sachargument</td><td>Gefühl ersetzt Begründung</td></tr>
+    <tr><td>Autorität ohne Beleg</td><td>„Experten sagen“, aber keiner wird genannt</td></tr>
+    <tr><td>Strohmann</td><td>Gegner wird verzerrt dargestellt, um ihn leichter zu widerlegen</td></tr>
+  </table></div>
+
+  <p class="muster">„Die Aussage ‚Entweder wir handeln jetzt, oder unsere Kinder zahlen den Preis‘ (Z. 12) wirkt zwar zwingend, ist aber nur scheinbar logisch: Sie stellt nur zwei Möglichkeiten dar und blendet abgestufte Lösungen aus. Dadurch wird das Publikum unter Entscheidungsdruck gesetzt.“</p>
+
+  <div class="box warn"><span class="lbl">Wichtig</span><p>Zeige auch <strong>Stärken</strong> (z. B. gut belegte Fakten, nachvollziehbare Folgerungen). Dann wirkt deine Bewertung differenziert, und genau das trennt 13 von 15 Punkten.</p></div>
+</section>
+
+<!-- ======================= SCHLUSS ======================= -->
+<section id="schluss">
+  <h2>4 Schluss <small>Bilanz, Wirkung, Hypothese prüfen, ggf. eigene Beurteilung</small></h2>
+  <ol>
+    <li><strong>Ergebnisse bündeln:</strong> Welche 2–3 Strategien prägen die Rede?</li>
+    <li><strong>Wirkung:</strong> Wie überzeugend ist sie für das damalige Publikum, und wie wirkt sie auf heutige Leser?</li>
+    <li><strong>Hypothese:</strong> bestätigt oder differenziert?</li>
+    <li><strong>Eigene Beurteilung:</strong> nur, wenn die Aufgabe es verlangt. Dann begründet und mit Textbezug.</li>
+  </ol>
+  <p class="muster">„Insgesamt zeigt sich, dass die Rednerin ihr Ziel vor allem durch eine Verbindung aus emotionalen Bildern, einem verbindenden ‚Wir‘ und ihrer Autorität als Bürgermeisterin erreicht. Die anfängliche Hypothese bestätigt sich, muss jedoch insofern differenziert werden, als die Argumentation an einigen Stellen vereinfacht und einseitig bleibt. Dadurch wirkt die Rede mitreißend, aber nicht in jedem Punkt überzeugend.“</p>
+  <div class="box bad"><span class="lbl">Vermeiden</span><p>Neue Argumente, wiederholte Satz-für-Satz-Zusammenfassung, ein abruptes Ende ohne Fazit.</p></div>
+</section>
+
+<!-- ======================= BEISPIEL ======================= -->
+<section id="beispiel">
+  <h2>Komplettes Beispiel <small>Selbst erfundene Rede, damit du das Verfahren einmal ganz siehst</small></h2>
+
+  <div class="box"><span class="lbl">Aufgabe (Muster)</span><p>Analysieren Sie die Rede der Bürgermeisterin Lena Hartmann im Hinblick auf ihre Argumentationsstruktur und die sprachlich-rhetorische Gestaltung. Berücksichtigen Sie dabei die Wirkung auf die Zuhörer.</p></div>
+
+  <h3>Die Rede</h3>
+  <div class="rede" role="group" aria-label="Beispielrede mit Zeilennummern">
+    <p><span class="z">Z. 1</span><span>Liebe Mitbürgerinnen und Mitbürger,</span></p>
+    <p><span class="z">Z. 2</span><span>wir stehen heute an einem Scheideweg.</span></p>
+    <p><span class="z">Z. 3</span><span>Die Zeit der Ausreden ist vorbei. Die Zeit des Handelns beginnt jetzt.</span></p>
+    <p><span class="z">Z. 4</span><span>Jeder von uns kennt die Bilder: überflutete Straßen, ausgetrocknete Felder,</span></p>
+    <p><span class="z">Z. 5</span><span>Familien, die vor den Trümmern ihres Zuhauses stehen.</span></p>
+    <p><span class="z">Z. 6</span><span>Und jeder weiß: Wenn wir weiter zögern, werden diese Bilder zum Alltag.</span></p>
+    <p><span class="z">Z. 7</span><span>Seit zwanzig Jahren sind die Folgen des Klimawandels wissenschaftlich belegt.</span></p>
+    <p><span class="z">Z. 8</span><span>Dennoch haben wir gewartet. Wir haben diskutiert. Wir haben vertagt.</span></p>
+    <p><span class="z">Z. 9</span><span>Als Bürgermeisterin dieser Stadt sage ich Ihnen: Das war ein Fehler.</span></p>
+    <p><span class="z">Z. 10</span><span>Deshalb schlage ich vor, dass unsere Stadt bis 2035 klimaneutral wird.</span></p>
+    <p><span class="z">Z. 11</span><span>Das kostet Geld. Aber nichts ist teurer als Nichtstun.</span></p>
+    <p><span class="z">Z. 12</span><span>Entweder wir handeln jetzt, oder unsere Kinder zahlen den Preis.</span></p>
+    <p><span class="z">Z. 13</span><span>Lassen Sie uns gemeinsam den ersten Schritt gehen: für unsere Stadt, für unsere Kinder, für unsere Zukunft!</span></p>
+  </div>
+
+  <h3>Markierungen beim Lesen: so annotierst du</h3>
+  <div class="scroll"><table>
+    <tr><th>Zeile</th><th>Notiz am Rand</th></tr>
+    <tr><td>2</td><td>Metapher „Scheideweg“, Wir</td></tr>
+    <tr><td>3</td><td>Parallelismus + Antithese (Ausreden / Handeln), Kurzsätze</td></tr>
+    <tr><td>4–5</td><td>Aufzählung drastischer Bilder = <span class="tag">Pathos</span></td></tr>
+    <tr><td>6</td><td>Folgenargument, „jeder“ = Pauschalisierung</td></tr>
+    <tr><td>7</td><td>Faktenargument, aber keine Quelle = <span class="tag">Logos</span></td></tr>
+    <tr><td>8</td><td>Anapher „Wir haben“, Steigerung, inklusives Wir</td></tr>
+    <tr><td>9</td><td>„Als Bürgermeisterin“ = <span class="tag">Ethos</span>, Selbstkritik</td></tr>
+    <tr><td>10</td><td>Kernthese / Forderung (2035)</td></tr>
+    <tr><td>11</td><td>Zugeständnis + Hyperbel</td></tr>
+    <tr><td>12</td><td>Falsches Dilemma, emotionaler Druck</td></tr>
+    <tr><td>13</td><td>Appell, Trikolon, Wir</td></tr>
+  </table></div>
+
+  <h3>Beispielanalyse (Musterlösung)</h3>
+
+  <details open>
+    <summary>Einleitung</summary>
+    <div class="in">
+      <p>In der politischen Rede ohne Titel, die die Bürgermeisterin Lena Hartmann vor Bürgerinnen und Bürgern ihrer Stadt hält, thematisiert sie die Notwendigkeit sofortiger Klimaschutzmaßnahmen. Die Rede ist in einem Kontext zunehmender Folgen des Klimawandels angesiedelt, in dem lokale Politik zum Handeln aufgefordert wird. Als Stadtoberhaupt verfügt die Rednerin über politische Autorität und versucht, ihr Publikum für ein ehrgeiziges kommunales Klimaziel zu gewinnen.</p>
+      <p><small>Hinweis: Da die Rede fiktiv ist, fehlen Datum und Ort. In der Klausur ergänzt du alle gegebenen Angaben.</small></p>
+    </div>
+  </details>
+
+  <details open>
+    <summary>Zusammenfassung + Hypothese</summary>
+    <div class="in">
+      <p>Zunächst begrüßt die Rednerin ihre Zuhörer und kündigt an, dass die Stadt vor einer entscheidenden Wende stehe (Z. 1–3). Anschließend beschreibt sie Folgen des Klimawandels, die allen bekannt seien, und warnt vor einer Verschlimmerung bei weiterem Zögern (Z. 4–6). Daraufhin verweist sie auf den langen wissenschaftlichen Kenntnisstand, kritisiert das bisherige Abwarten und räumt einen Fehler ein (Z. 7–9). Dann schlägt sie vor, die Stadt bis 2035 klimaneutral zu machen, erkennt die Kosten an und stellt diese den Folgen des Nichthandelns gegenüber (Z. 10–12). Schließlich ruft sie zum gemeinsamen Handeln auf (Z. 13).</p>
+      <p>Es ist zu vermuten, dass Hartmann ihre Zuhörer von der Notwendigkeit sofortigen Handelns überzeugen will, indem sie emotionale Bilder und ein inklusives „Wir“ einsetzt, ihre Forderung durch ihr Amt legitimiert und zugleich durch zugespitzte Alternativen Handlungsdruck erzeugt.</p>
+    </div>
+  </details>
+
+  <details open>
+    <summary>3a Sprachanalyse</summary>
+    <div class="in">
+      <h4>Einstieg: Gemeinschaft und Dringlichkeit (Z. 1–3)</h4>
+      <p>Mit der direkten Anrede „Liebe Mitbürgerinnen und Mitbürger“ (Z. 1) stellt die Rednerin Nähe her und bezieht alle gleichberechtigt ein. Die Metapher „Scheideweg“ (Z. 2) vermittelt, dass jetzt eine grundlegende Entscheidung nötig ist, und baut dadurch Spannung auf. Der Parallelismus „Die Zeit der Ausreden ist vorbei. Die Zeit des Handelns beginnt jetzt“ (Z. 3) stellt in einer Antithese Vergangenheit und Zukunft gegenüber. Die kurzen Sätze wirken entschlossen und signalisieren, dass Diskussionen nicht mehr ausreichen.</p>
+
+      <h4>Pathos: Emotionalisierung (Z. 4–6)</h4>
+      <p>In Z. 4–5 reiht sie drastische Bilder wie „überflutete Straßen“ und „Familien vor Trümmern“ aneinander. Die Aufzählung wirkt durch ihre Fülle bedrückend und löst Mitgefühl und Betroffenheit aus. Indem sie behauptet, jeder kenne diese Bilder (Z. 4), schafft sie eine gemeinsame Erfahrung, die das Publikum auf ihre Seite zieht. Der Satz „Wenn wir weiter zögern, werden diese Bilder zum Alltag“ (Z. 6) steigert die Wirkung durch eine Drohkulisse, die Angst vor der Zukunft weckt und damit den Boden für die spätere Forderung bereitet.</p>
+
+      <h4>Logos und Ethos: Legitimation (Z. 7–9)</h4>
+      <p>Mit der Angabe, die Folgen seien seit zwanzig Jahren wissenschaftlich belegt (Z. 7), setzt die Rednerin erstmals ein sachliches Argument ein, das ihre Position rational untermauert. Die dreifache Anapher „Wir haben gewartet. Wir haben diskutiert. Wir haben vertagt“ (Z. 8) listet Versäumnisse in einer Klimax auf und wirkt dadurch wie eine Anklage. Zugleich verhindert das inklusive „Wir“, dass sie sich vom Publikum abgrenzt: Verantwortung wird geteilt, statt jemandem Schuld zuzuweisen. In Z. 9 verstärkt der Verweis „Als Bürgermeisterin dieser Stadt“ ihr Ethos: Sie spricht aus einer Position der Verantwortung, und das Eingeständnis eines Fehlers lässt sie ehrlich und glaubwürdig erscheinen.</p>
+
+      <h4>Forderung und Appell (Z. 10–13)</h4>
+      <p>Das Adverb „Deshalb“ (Z. 10) leitet logisch von der Kritik zur konkreten Forderung über und lässt sie als folgerichtig erscheinen. Dass sie die Kosten selbst anspricht („Das kostet Geld“, Z. 11), wirkt ehrlich und nimmt möglichen Einwänden die Spitze. Die Hyperbel „nichts ist teurer als Nichtstun“ (Z. 11) kehrt dieses Zugeständnis jedoch sofort um und stellt Nichthandeln als unvernünftig dar. Die Antithese in Z. 12 erzeugt einen Entscheidungsdruck. Der abschließende Appell „Lassen Sie uns gemeinsam den ersten Schritt gehen“ (Z. 13) verbindet Aufforderung und Gemeinschaft. Das Trikolon „für unsere Stadt, für unsere Kinder, für unsere Zukunft“ steigert vom Nahen zum Persönlichen und schließlich zum Allgemeinen und endet in einem einprägsamen, emotionalen Höhepunkt.</p>
+    </div>
+  </details>
+
+  <details open>
+    <summary>3b Argumentationsanalyse</summary>
+    <div class="in">
+      <p>Die zentrale These der Rednerin lautet, dass die Stadt <strong>sofort handeln und bis 2035 klimaneutral werden muss</strong> (Z. 10). Gestützt wird sie durch mehrere Argumente: Ein Beispielargument zeigt die Folgen des Klimawandels anhand überfluteter Straßen und zerstörter Häuser (Z. 4–5). Ein Faktenargument verweist auf den wissenschaftlichen Kenntnisstand (Z. 7). Ein Folgenargument erklärt, dass Zögern Katastrophen zum Alltag macht (Z. 6). Ein normatives Argument beruft sich auf die Verantwortung gegenüber den Kindern (Z. 12–13).</p>
+      <p>Die Argumentation ist jedoch teilweise nur scheinbar schlüssig. Die Behauptung „Jeder von uns kennt die Bilder“ (Z. 4) ist eine Pauschalisierung, die Widerspruch ausschließt. Die Aussage „Seit zwanzig Jahren … wissenschaftlich belegt“ (Z. 7) bleibt ohne Quelle, ihre Autorität wird nur vorausgesetzt. Die Gleichung „Nichts ist teurer als Nichtstun“ (Z. 11) ist unbelegt und übertrieben, denn konkrete Kosten werden nicht genannt. Besonders problematisch ist das <strong>falsche Dilemma</strong> in Z. 12, das nur zwei Möglichkeiten zulässt und differenzierte Lösungen ausblendet. Stärken der Rede sind der klare Aufbau von Problem über Ursache zu Lösung und die offene Nennung der Kosten, die die Rednerin glaubwürdig macht.</p>
+    </div>
+  </details>
+
+  <details open>
+    <summary>4 Schluss</summary>
+    <div class="in">
+      <p>Insgesamt zeigt sich, dass Hartmann ihr Ziel vor allem durch ein Zusammenspiel aus Pathos (drastische Bilder, Appell), Ethos (Amt, Selbstkritik) und einem durchgängig inklusiven „Wir“ verfolgt. Der Logos bleibt dagegen vergleichsweise schwach, weil zentrale Behauptungen unbelegt sind. Die Hypothese bestätigt sich somit, muss aber differenziert werden: Die Rede überzeugt vor allem emotional und weniger durch belastbare Sachargumente. Beim Publikum erzeugt sie Betroffenheit, Verantwortungsgefühl und Handlungsbereitschaft, kann aber bei kritischen Zuhörern auf Skepsis stoßen, wenn diese konkrete Belege vermissen.</p>
+      <p><small>Wenn gefordert: eigene Beurteilung, z. B. ob die Rede als Impuls für die Kommunalpolitik angemessen ist, begründet und mit Textbezug.</small></p>
+    </div>
+  </details>
+
+  <div class="box good"><span class="lbl">Was die Musterlösung richtig macht</span>
+    <ul>
+      <li>Jeder Absatz folgt Beleg → Mittel → Wirkung → Absicht.</li>
+      <li>Die Sprachanalyse ist nach <strong>Wirkungsabsicht</strong> gegliedert.</li>
+      <li>Pathos, Ethos und Logos werden benannt und gewichtet.</li>
+      <li>Schwächen <em>und</em> Stärken der Argumentation kommen vor.</li>
+      <li>Der Schluss prüft die Hypothese und differenziert sie.</li>
+    </ul></div>
+</section>
+
+<!-- ======================= FEHLER ======================= -->
+<section id="fehler">
+  <h2>Typische Fehler und wie du sie vermeidest</h2>
+  <div class="scroll"><table>
+    <tr><th>Fehler</th><th>Besser</th></tr>
+    <tr><td>Stilmittel nur aufzählen</td><td>Immer Wirkung + Bezug zur Absicht ergänzen</td></tr>
+    <tr><td>Nacherzählung statt Analyse</td><td>Frage dich bei jedem Satz: „Wie wird hier überzeugt?“</td></tr>
+    <tr><td>Zitate in der Zusammenfassung</td><td>Alles in eigenen Worten</td></tr>
+    <tr><td>Präteritum</td><td>Durchgehend Präsens (Vorzeitiges im Perfekt)</td></tr>
+    <tr><td>Keine Zeilenangaben</td><td>Jeder Beleg mit (Z. …)</td></tr>
+    <tr><td>Eigene Meinung zu früh</td><td>Beurteilung nur im Schluss, nur falls gefordert</td></tr>
+    <tr><td>Redner = „der Autor“ / „der Text sagt“</td><td>„der Redner“, „die Rednerin“, „der Kanzler“</td></tr>
+    <tr><td>Rhetorische Mittel falsch bestimmt</td><td>Nur Mittel nennen, die du sicher erkennst; Metapher ≠ Vergleich, Anapher ≠ Parallelismus</td></tr>
+    <tr><td>Kontext vergessen</td><td>Immer Rolle, Anlass und Adressaten einbeziehen</td></tr>
+    <tr><td>Alle Mittel in einem Absatz</td><td>Klare Absätze mit Zwischenfazit</td></tr>
+  </table></div>
+
+  <h3>Stil-Check für die Darstellungsleistung</h3>
+  <ul>
+    <li>Fachbegriffe richtig verwenden (Anapher, Ethos, Hypotaxe …)</li>
+    <li>sachlicher Stil, keine Umgangssprache, kein „ich finde“</li>
+    <li>Satzverknüpfungen: außerdem, darüber hinaus, dadurch, folglich, hingegen, dennoch</li>
+    <li>Zitate in Anführungszeichen, <strong>kurz</strong>, mit Zeilenangabe, grammatisch in den Satz eingebaut</li>
+    <li>Abwechslungsreiche Verben statt ständig „sagt“ und „zeigt“: betont, hebt hervor, unterstreicht, suggeriert, mahnt, stellt gegenüber</li>
+  </ul>
+</section>
+
+<!-- ======================= KLAUSURTAG ======================= -->
+<section id="klausur">
+  <h2>Klausurtag <small>Vorgehen, Zeitplan, Checkliste</small></h2>
+
+  <h3>Schritt für Schritt</h3>
+  <ol>
+    <li><strong>Aufgabe lesen:</strong> Operatoren (analysieren, erläutern, beurteilen), evtl. Teilaufgabe B (vergleichen, Stellung nehmen).</li>
+    <li><strong>Rede zweimal lesen:</strong> beim ersten Mal verstehen, beim zweiten Mal mit Farbcode markieren (z. B. Gelb = Stilmittel, Grün = Argumente, Blau = Wir/Ihr).</li>
+    <li><strong>Abschnitte notieren</strong> (Zeilen) und Kernthese bestimmen.</li>
+    <li><strong>Hypothese</strong> formulieren und Grobgliederung der Analyse festlegen (nach Wirkungsabsichten).</li>
+    <li><strong>Schreiben</strong> in der Reihenfolge 1–4. Wenn du in Zeitnot gerätst: lieber Argumentation und Schluss knapp, als sie zu streichen.</li>
+    <li><strong>Korrigieren:</strong> Zeitform, Rechtschreibung, Zeilenangaben, Absätze.</li>
+  </ol>
+
+  <h3>Zeitplan (Beispiel: 180 Minuten)</h3>
+  <div class="scroll"><table>
+    <tr><th>Phase</th><th>Minuten</th></tr>
+    <tr><td>Aufgabe + Rede lesen, markieren</td><td>ca. 30</td></tr>
+    <tr><td>Gliederung + Hypothese</td><td>ca. 15</td></tr>
+    <tr><td>Einleitung + Zusammenfassung</td><td>ca. 25</td></tr>
+    <tr><td>Sprachanalyse</td><td>ca. 50</td></tr>
+    <tr><td>Argumentation + Schluss</td><td>ca. 40</td></tr>
+    <tr><td>Korrektur</td><td>ca. 15</td></tr>
+  </table></div>
+  <p><small>Passe die Zeiten an die tatsächliche Klausurlänge an.</small></p>
+
+  <h3>Checkliste (zum Abhaken)</h3>
+  <ul class="check">
+    <li><label><input type="checkbox"> Operatoren und Teilaufgaben verstanden</label></li>
+    <li><label><input type="checkbox"> Rede 2× gelesen, Stilmittel und Schlüsselwörter markiert</label></li>
+    <li><label><input type="checkbox"> Sinnabschnitte mit Zeilen notiert</label></li>
+    <li><label><input type="checkbox"> Kernthese(n) und Hypothese formuliert</label></li>
+    <li><label><input type="checkbox"> Einleitung: Titel, Autor/in mit Rolle, Textsorte, Thema, Zeit, Anlass/Kontext</label></li>
+    <li><label><input type="checkbox"> Zusammenfassung: Präsens, ohne Zitate, mit Zeilen</label></li>
+    <li><label><input type="checkbox"> Sprachanalyse: jeder Beleg mit Mittel, Wirkung, Absichtsbezug</label></li>
+    <li><label><input type="checkbox"> Pathos, Ethos, Logos benannt (mit Stelle und Zweck)</label></li>
+    <li><label><input type="checkbox"> Para-/nonverbales nur, falls bekannt</label></li>
+    <li><label><input type="checkbox"> Argumentationsanalyse: Argumenttypen, Stärken und Schwächen</label></li>
+    <li><label><input type="checkbox"> Schluss: Bilanz, Wirkung, Hypothese geprüft, ggf. Beurteilung</label></li>
+    <li><label><input type="checkbox"> Korrekturlesen: Zeitform, Zeilenangaben, Rechtschreibung, Zeichensetzung</label></li>
+  </ul>
+
+  <h3>Mini-Selbsttest</h3>
+  <details>
+    <summary>1. Was ist der Unterschied zwischen Anapher und Parallelismus?</summary>
+    <div class="in"><p>Die Anapher wiederholt nur den <strong>Satz- oder Satzgliedanfang</strong>. Der Parallelismus wiederholt den gesamten <strong>Satzbau</strong>, aber nicht unbedingt die Wörter.</p></div>
+  </details>
+  <details>
+    <summary>2. Wie begründest du Ethos in einer Rede?</summary>
+    <div class="in"><p>Ich zeige, woran der Redner Glaubwürdigkeit aufbaut (Amt, Erfahrung, Werte, Selbstkritik, Verweis auf Autoritäten), nenne die Stelle (Z.) und erkläre, warum das seine Forderung stützt.</p></div>
+  </details>
+  <details>
+    <summary>3. Was ist ein „falsches Dilemma“?</summary>
+    <div class="in"><p>Es werden nur zwei Möglichkeiten präsentiert („entweder … oder …“), obwohl es weitere gibt. Das erzeugt künstlichen Entscheidungsdruck.</p></div>
+  </details>
+  <details>
+    <summary>4. Warum steht die Hypothese vor der Sprachanalyse und nicht im Schluss?</summary>
+    <div class="in"><p>Sie gibt der Analyse eine Leitfrage (roter Faden) und wird am Ende bestätigt oder differenziert. So wirkt die Arbeit geschlossen.</p></div>
+  </details>
+  <details>
+    <summary>5. Was ist ein Satz, der <em>nicht</em> in die Zusammenfassung gehört?</summary>
+    <div class="in"><p>Z. B. „Die Rednerin verwendet geschickt eine Anapher.“ Das ist Analyse und Wertung. In die Zusammenfassung gehört nur der Inhalt, neutral und im Präsens.</p></div>
+  </details>
+</section>
+</main>
+
+<button class="theme" type="button" id="themeBtn" aria-label="Hell/Dunkel wechseln">Hell / Dunkel</button>
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('themeBtn');
+  btn.addEventListener('click',function(){
+    var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var cur=root.getAttribute('data-theme')||(dark?'dark':'light');
+    root.setAttribute('data-theme',cur==='dark'?'light':'dark');
+  });
+})();
+</script>
+</body>
+</html>
